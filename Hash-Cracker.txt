@@ -143,7 +143,8 @@ except:
 
 hash_list.close()
 ######################################################################################################################################################
-**	"how to take url with password"
+
+"how to take raw text from web with password"
 	
 import hashlib
 import requests
