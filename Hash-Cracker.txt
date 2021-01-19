@@ -1,0 +1,187 @@
+Home Work 2
+
+######################################################################################################################################################
+
+*MD5*
+
+import hashlib
+import sys
+
+passwords = open("password.txt", "r")
+hashpassword = open("MD5.txt", "w")
+for x in passwords:
+	hash = x.replace('\n', "").replace('\r', "")
+	# print(hash)
+	result = hashlib.md5(hash.encode())
+	hashpassword.write(result.hexdigest()+" : "+hash+'\n')
+passwords.close()
+hashpassword.close()
+
+try:
+	hash_list = open('MD5.txt', 'r')
+	for key in hash_list:
+		#print(hash)
+		new_hash_list = key.strip('\n').split(' : ')[0].splitlines()
+		#print(new_hash)
+		for hash_key in new_hash_list:
+			#print(key)
+			Input = sys.argv[1]
+			if Input == hash_key:
+				print("YES: "+key)
+				break;
+
+
+except:
+	print("We Have Problem")
+
+
+hash_list.close()
+######################################################################################################################################################
+
+*SHA256*
+
+import hashlib
+import sys
+
+passwords = open("password.txt", "r")
+hashpassword = open("SHA256.txt", "w")
+for x in passwords:
+	hash = x.replace('\n', "").replace('\r', "")
+	# print(hash)
+	result = hashlib.sha256(hash.encode())
+	hashpassword.write(result.hexdigest()+" : "+hash+'\n')
+passwords.close()
+hashpassword.close()
+
+try:
+	hash_list = open('SHA256.txt', 'r')
+	for key in hash_list:
+		#print(hash)
+		new_hash_list = key.strip('\n').split(' : ')[0].splitlines()
+		#print(new_hash)
+		for hash_key in new_hash_list:
+			#print(key)
+			Input = sys.argv[1]
+			if Input == hash_key:
+				print("YES: "+key)
+				break;
+
+
+except:
+	print("We Have Problem")
+
+
+hash_list.close()
+######################################################################################################################################################
+
+*SHA1*
+
+import hashlib
+import sys
+
+passwords = open("password.txt", "r")
+hashpassword = open("SHA1.txt", "w")
+for x in passwords:
+	hash = x.replace('\n', "").replace('\r', "")
+	# print(hash)
+	result = hashlib.sha1(hash.encode())
+	hashpassword.write(result.hexdigest()+" : "+hash+'\n')
+passwords.close()
+hashpassword.close()
+
+try:
+	hash_list = open('SHA1.txt', 'r')
+	for key in hash_list:
+		#print(hash)
+		new_hash_list = key.strip('\n').split(' : ')[0].splitlines()
+		#print(new_hash)
+		for hash_key in new_hash_list:
+			#print(key)
+			Input = sys.argv[1]
+			if Input == hash_key:
+				print("YES: "+key)
+				break;
+
+
+except:
+	print("We Have Problem")
+
+
+hash_list.close()
+######################################################################################################################################################
+
+*SHA512*
+
+import hashlib
+import sys
+
+passwords = open("password.txt", "r")
+hashpassword = open("SHA512.txt", "w")
+for x in passwords:
+	hash = x.replace('\n', "").replace('\r', "")
+	# print(hash)
+	result = hashlib.sha512(hash.encode())
+	hashpassword.write(result.hexdigest()+" : "+hash+'\n')
+passwords.close()
+hashpassword.close()
+
+try:
+	hash_list = open('SHA512.txt', 'r')
+	for key in hash_list:
+		#print(hash)
+		new_hash_list = key.strip('\n').split(' : ')[0].splitlines()
+		#print(new_hash)
+		for hash_key in new_hash_list:
+			#print(key)
+			Input = sys.argv[1]
+			if Input == hash_key:
+				print("YES: "+key)
+				break;
+
+
+except:
+	print("We Have Problem")
+
+
+hash_list.close()
+######################################################################################################################################################
+**	"how to take url with password"
+	
+import hashlib
+import requests
+import sys
+
+hashpassword = open("hash.txt", "w")
+password = requests.get('https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10k-most-common.txt')
+content = password.text
+# print(content)
+new_content = content.splitlines()
+for x in new_content:
+	hash = x.replace('\n', "").replace('\r', "")
+	# cprint(hash)
+	result = hashlib.md5(hash.encode())
+	hashpassword.write(result.hexdigest()+" : "+hash+'\n')
+
+hashpassword.close()
+
+try:
+	hash_list = open('hash.txt', 'r')
+	for key in hash_list:
+		#print(hash)
+		new_hash_list = key.strip('\n').split(' : ')[0].splitlines()
+		#print(new_hash)
+		for hash_key in new_hash_list:
+			#print(key)
+			Input = sys.argv[1]
+			if Input == hash_key:
+				print("YES: "+key)
+				break;
+
+
+except:
+	print("We Have Problem")
+
+
+hash_list.close()
+	
+######################################################################################################################################################	
